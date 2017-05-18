@@ -1,0 +1,16 @@
+{
+  "apps" : [{
+          "name": "Rero-0",
+          "script": "run_bot.py",
+          "exec_interpreter": "python3.5",
+		  "merge_logs"      : true,
+		  "log_date_format" : "YYYY-MM-DD HH:mm 0530"
+  },
+  {
+          "name": "Rero-1",
+          "script": "run_bot_1.py",
+          "exec_interpreter": "python3.5",
+		  "merge_logs"      : true,
+		  "log_date_format" : "YYYY-MM-DD HH:mm 0530"
+  }]
+}
