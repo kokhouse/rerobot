@@ -1,5 +1,4 @@
 ![Rero](https://owo.solutions/43dc45.png)
-[![Build Status](https://travis-ci.com/lap00zza/Rero_Beta.svg?token=wrZ35UBxmAaLWsbrcmrx&branch=master)](https://travis-ci.com/lap00zza/Rero_Beta)
 [![Code Climate](https://codeclimate.com/repos/579f7415e6942754d3006aba/badges/8ace740321ade6fd8e8c/gpa.svg)](https://codeclimate.com/repos/579f7415e6942754d3006aba/feed)
 
 # Rero
