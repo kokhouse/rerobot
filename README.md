@@ -1,14 +1,8 @@
 ![Rero](https://owo.solutions/43dc45.png)
-[![Code Climate](https://codeclimate.com/repos/579f7415e6942754d3006aba/badges/8ace740321ade6fd8e8c/gpa.svg)](https://codeclimate.com/repos/579f7415e6942754d3006aba/feed)
+[![Code Climate](https://codeclimate.com/repos/579f7415e6942754d3006aba/badges/8ace740321ade6fd8e8c/gpa.svg)
 
-# Rero
-Welcome to Rero's repository. Currently the source is closed. If you want to run a Rero instance make sure you have the following set up:
-
-1. REDIS
-2. MongoDB
-3. Python3.5
-4. Yes that's all
-
+# Local Hosting
+I would prefer if you don't run an instance of my bot. 
 
 ## License
 Copyright 2017 Luxory (@LXYcs)
