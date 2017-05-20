@@ -126,7 +126,7 @@ class CustomCommands:
                             a = message.author.roles
                         except AttributeError:
                             await self.ctx.send_message(message.channel, "**Info**: `There was an error verifying if "
-                                                                         "you have 'LAPZ' role. Please retry this "
+                                                                         "you have 'RERO' role. Please retry this "
                                                                          "command.`")
                             return
                         # print(a)
@@ -187,9 +187,9 @@ class CustomCommands:
                             for c in commands_list:
                                 if c['command_name'] == command:
                                     creator_id = c['creator_id']
-                                    lapz = discord.utils.get(message.server.roles, name="LAPZ")
-                                    if lapz:
-                                        if message.author.id == creator_id or lapz in message.author.roles:
+                                    rero = discord.utils.get(message.server.roles, name="RERO")
+                                    if rero:
+                                        if message.author.id == creator_id or rero in message.author.roles:
                                             field = {"serv_id": server_id}
                                             update = {"$pull": {"commands_list": {"command_name": command}},
                                                       "$currentDate":
@@ -204,7 +204,7 @@ class CustomCommands:
                                         else:
                                             await self.ctx.send_message(message.channel,
                                                                         "**Error**: `Only the creator of this "
-                                                                        "command or someone with LAPZ role "
+                                                                        "command or someone with RERO role "
                                                                         "can delete it.`")
                                     else:
                                         if message.author.id == creator_id:

@@ -71,14 +71,13 @@ def help_message():
           ?xkcd [number] : Random xkcd or specify a number
            ?weather city : Get weather information
     ```
-    For a complete list of functions (*too many to send by PM*), visit
-    https://lapoozza.me/commands-list/
+    For a complete list of functions (*too many to send by PM*),
 
-    Want L.A.P.Z.B.O.T in your server too?
-    https://lapoozza.me/add
+    Want Rero in your server too?
+    <https://discordapp.com/oauth2/authorize?client_id=314796406948757504&scope=bot&permissions=8>
 
     Visit RERO's Server:
-    https://lapoozza.me/discord
+    https://discord.gg/nSHt53W
     """
     return help_text
 

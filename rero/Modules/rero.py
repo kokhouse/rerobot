@@ -24,7 +24,7 @@ class Rero(discord.Client):
     Rero, the multi-purpose bot for Discord.
 
     For more information about Rero, visit out website
-        http://rero.xyz
+        https://discord.gg/nSHt53W
     We are also present in the following social media sites:
         https://twitter.com/lxycs
         https://www.facebook.com/rerobot/

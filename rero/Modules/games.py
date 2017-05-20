@@ -184,7 +184,7 @@ class RPS:
     :page_facing_up: -> Paper
     :scissors: -> Scissors
     """
-    lapz_instance = None
+    rero_instance = None
     message = None
 
     def __init__(self, author, author_id):
@@ -202,7 +202,7 @@ class RPS:
         """
         Main function
         """
-        await self.lapz_instance.send_message(self.message.channel, self.message.author.mention +
+        await self.rero_instance.send_message(self.message.channel, self.message.author.mention +
                                               '\n***Rock, Paper and Scissors (vs AI)***')
         # call the user's guess function
         number = await self.user_guess()
@@ -234,26 +234,26 @@ class RPS:
         get first guess
         :return:
         """
-        await self.lapz_instance.send_message(self.message.channel, self.message.author.mention +
+        await self.rero_instance.send_message(self.message.channel, self.message.author.mention +
                                               ' what is your choice? ( Enter: **r** or **p** or **s** )'
                                               '\n**r**: {}\n**p**: {}\n**s**: {}'
                                               .format(self.Rock, self.Paper, self.Scissors))
-        guess = await self.lapz_instance.wait_for_message(author=self.message.author, timeout=30)
+        guess = await self.rero_instance.wait_for_message(author=self.message.author, timeout=30)
         if guess is None:
-            await self.lapz_instance.send_message(self.message.channel,
+            await self.rero_instance.send_message(self.message.channel,
                                                   "You took to long. Exiting game. Please restart.")
             return
         g_lower = str(guess.content).lower()
         # If that guess is invalid, loop until we get a valid guess.
         while g_lower not in ('r', 'p', 's'):
-            await self.lapz_instance.send_message(
+            await self.rero_instance.send_message(
                 self.message.channel,
                 self.message.author.mention +
                 ' *invalid choice*. What is your choice?\n**r**: {}\n**p**: {}\n**s**: {}'.
                 format(self.Rock, self.Paper, self.Scissors))
-            guess = await self.lapz_instance.wait_for_message(author=self.message.author, timeout=30)
+            guess = await self.rero_instance.wait_for_message(author=self.message.author, timeout=30)
             if guess is None:
-                await self.lapz_instance.send_message(self.message.channel,
+                await self.rero_instance.send_message(self.message.channel,
                                                       "You took to long. Exiting game. Please restart.")
                 return
             g_lower = str(guess.content).lower()
@@ -278,25 +278,25 @@ class RPS:
         """
         Restart
         """
-        await self.lapz_instance.send_message(self.message.channel, self.message.author.mention +
+        await self.rero_instance.send_message(self.message.channel, self.message.author.mention +
                                               '\nWould you like to play again? (y/n)')
-        answer = await self.lapz_instance.wait_for_message(author=self.message.author, timeout=30)
+        answer = await self.rero_instance.wait_for_message(author=self.message.author, timeout=30)
         if answer is None:
-            await self.lapz_instance.send_message(self.message.channel,
+            await self.rero_instance.send_message(self.message.channel,
                                                   "You took to long. Exiting game. Please restart.")
             return
         try:
             ans_l = str(answer.content).lower()
         except Exception as e:
             # print(e)
-            await self.lapz_instance.send_message(self.message.channel, self.message.author.mention +
+            await self.rero_instance.send_message(self.message.channel, self.message.author.mention +
                                                   '\nThanks for playing. \nCome play again soon!')
             return
         # if/elif statement
         if ans_l == 'y':
             await self.main()
         else:
-            await self.lapz_instance.send_message(self.message.channel, self.message.author.mention +
+            await self.rero_instance.send_message(self.message.channel, self.message.author.mention +
                                                   '\nThanks for playing. \nCome play again soon!')
             return
 
@@ -309,16 +309,16 @@ class RPS:
         :param number:
         """
         difference = num - number
-        await self.lapz_instance.send_message(self.message.channel, self.message.author.mention + '\nYou: {} vs AI: {}'
+        await self.rero_instance.send_message(self.message.channel, self.message.author.mention + '\nYou: {} vs AI: {}'
                                               .format(self.player_choice, self.comp_choice))
         # if/elif statement
         if difference == 0:
-            await self.lapz_instance.send_message(self.message.channel, self.message.author.mention + '\n**TIE**')
+            await self.rero_instance.send_message(self.message.channel, self.message.author.mention + '\n**TIE**')
             # Update Player DB
             await self.restart()
         elif difference % 3 == 1:
-            await self.lapz_instance.send_message(self.message.channel, self.message.author.mention + '**\nYou Lost**')
+            await self.rero_instance.send_message(self.message.channel, self.message.author.mention + '**\nYou Lost**')
             await self.restart()
         elif difference % 3 == 2:
-            await self.lapz_instance.send_message(self.message.channel, self.message.author.mention + '\n**You Won**')
+            await self.rero_instance.send_message(self.message.channel, self.message.author.mention + '\n**You Won**')
             await self.restart()

@@ -125,8 +125,8 @@ async def memes(ctx, message, meme_type: str="lenny"):
     if meme_type == 'feelsgoodman':
         await ctx.send_file(destination=message.channel, fp='./static/feelsgoodman.png', filename='feelsgoodman.png')
 
-    if meme_type == 'lapz':
-        await ctx.send_file(destination=message.channel, fp='./static/lapz.png', filename='lapz.png')
+    if meme_type == 'rero':
+        await ctx.send_file(destination=message.channel, fp='./static/rero.png', filename='rero.png')
 
 async def urban_dictionary(ctx, message):
     """

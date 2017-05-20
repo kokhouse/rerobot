@@ -29,7 +29,7 @@ async def report(reason: str, ctx, message):
     :param message:
     :return:
     """
-    channel = ctx.get_channel("240542987564744705")
+    channel = ctx.get_channel("315347852933201920")
     deliver_str = "Spam Records for '{}'\nServer: {} | Channel: {}\nGenerated at: {} UTC\n\n" \
         .format(message.author.name, message.server.name, message.channel.name,
                 str(datetime.datetime.utcnow()))

@@ -565,9 +565,9 @@ class Commands:
             if self.verify_enabled(message.server.id, "memes"):
                 await fun.memes(self.ctx, message, "feelsbadman")
 
-        if command.startswith(self.prefix + "lapz"):
+        if command.startswith(self.prefix + "rero"):
             if self.verify_enabled(message.server.id, "memes"):
-                await fun.memes(self.ctx, message, "lapz")
+                await fun.memes(self.ctx, message, "rero")
 
         if command.startswith(self.prefix + "ud"):
             if self.verify_enabled(message.server.id, "ud"):
@@ -652,7 +652,7 @@ class Commands:
         if command.startswith(self.prefix + "rps"):
             if self.verify_enabled(message.server.id, "roll"):
                 rps = games.RPS(message.author, message.author.id)
-                rps.lapz_instance = self.ctx
+                rps.rero_instance = self.ctx
                 rps.message = message
                 await self.ctx.loop.create_task(rps.main())
 
